@@ -26,4 +26,4 @@ export const Info = Template.bind({});
 Info.args = { variant: 'info', children: 'Badge' };
 
 export const Large = Template.bind({});
-Large.args = { variant: 'success', size: 'larga' };
+Large.args = { variant: 'success', size: 'large' };
