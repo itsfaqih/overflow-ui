@@ -56,7 +56,7 @@ const Template: Story<ComponentProps<typeof Sidenav>> = args => {
       >
         <Icon.Menu />
       </button>
-      <Sidenav handleClose={() => setOpenSidenav(false)} open={openSidenav}>
+      <Sidenav handleClose={() => setOpenSidenav(false)} open={openSidenav} {...args}>
         <Sidenav.Title>Overflow UI</Sidenav.Title>
         <Sidenav.List title="Main Menu">
           <Sidenav.Sub>
@@ -83,5 +83,5 @@ const Template: Story<ComponentProps<typeof Sidenav>> = args => {
   );
 };
 
-export const TextOnly = Template.bind({});
-TextOnly.args = { variant: 'success', children: 'This is a text only alert' };
+export const Default = Template.bind({});
+Default.args = {};

@@ -9,9 +9,8 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ComponentProps<typeof Checkbox>> = args => (
+const Template: Story<ComponentProps<typeof Checkbox>> = (args) => (
   <Checkbox {...args} />
 );
-
 export const Default = Template.bind({});
 Default.args = { checked: true };

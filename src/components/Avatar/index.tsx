@@ -13,7 +13,7 @@ export function Avatar({ username, src, alt, className, ring }: AvatarProps) {
     <img
       alt={alt || `${username}'s Avatar`}
       className={classNames(
-        'object-cover object-center w-10 h-10 rounded-full group-focus:ring-2 ring-primary-500',
+        'object-cover object-center w-10 h-10 rounded-full group-focus:ring-2',
         { 'ring-2 ring-white': ring },
         className
       )}

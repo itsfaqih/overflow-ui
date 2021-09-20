@@ -9,21 +9,24 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ComponentProps<typeof Pagination>> = args => {
+const Template: Story<ComponentProps<typeof Pagination>> = (args) => {
   const [page, setPage] = useState(2);
 
   return (
-    <Pagination currentPage={page} {...args}>
-      {Array(5)
-        .fill(null)
-        .map((_, i) => (
-          <Pagination.Button
-            key={i}
-            number={i + 1}
-            onClick={() => setPage(i + 1)}
-          />
-        ))}
-    </Pagination>
+    <>
+      <div>Current page: {page}</div>
+      <Pagination currentPage={page} {...args}>
+        {Array(5)
+          .fill(null)
+          .map((_, i) => (
+            <Pagination.Button
+              key={i}
+              number={i + 1}
+              onClick={() => setPage(i + 1)}
+            />
+          ))}
+      </Pagination>
+    </>
   );
 };
 

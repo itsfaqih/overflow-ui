@@ -9,7 +9,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ComponentProps<typeof Select>> = args => {
+const Template: Story<ComponentProps<typeof Select>> = (args) => {
   const [selected, setSelected] = useState<{
     label: string;
     value: string;
@@ -20,7 +20,6 @@ const Template: Story<ComponentProps<typeof Select>> = args => {
       Selected Label: {selected?.label || 'None'}, Value:{' '}
       {selected?.value || 'None'}
       <Select
-        defaultValue=""
         placeholder="Select fruit"
         options={[
           { label: 'All fruit', value: '' },
@@ -28,7 +27,10 @@ const Template: Story<ComponentProps<typeof Select>> = args => {
           { label: 'Orange', value: 'orange' },
           { label: 'Grape', value: 'grape' },
         ]}
-        onChange={setSelected}
+        onChange={(selected) =>
+          setSelected(selected as { label: string; value: string })
+        }
+        {...args}
       />
     </div>
   );

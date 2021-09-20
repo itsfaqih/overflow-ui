@@ -27,10 +27,6 @@ const Template: Story<ComponentProps<typeof Combobox>> = args => {
     }, 500);
   }, []);
 
-  useEffect(() => {
-    if (options.length > 0) setSelected(options[0]);
-  }, [options]);
-
   return (
     <div>
       Selected: {selected?.label || 'None'}

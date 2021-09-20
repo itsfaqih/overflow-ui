@@ -25,9 +25,6 @@ Large.args = { size: 'large', children: 'Button' };
 export const Contained = Template.bind({});
 Contained.args = { variant: 'contained', children: 'Button' };
 
-export const Outlined = Template.bind({});
-Outlined.args = { variant: 'outlined', children: 'Button' };
-
 export const Text = Template.bind({});
 Text.args = { variant: 'text', children: 'Button' };
 
